@@ -1,8 +1,8 @@
 package com.xism4.sternalboard;
 
+import com.xism4.sternalboard.misc.Metrics;
 import com.xism4.sternalboard.module.PluginModule;
 import com.xism4.sternalboard.service.Service;
-import com.xism4.sternalboard.misc.Metrics;
 import org.bukkit.Bukkit;
 import org.tinylog.Logger;
 import revxrsal.zapper.ZapperJavaPlugin;

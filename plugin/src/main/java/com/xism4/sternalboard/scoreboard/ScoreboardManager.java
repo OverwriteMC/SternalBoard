@@ -50,6 +50,7 @@ public class ScoreboardManager implements Manager {
         SternalBoard board = new SternalBoard(player);
         cacheRepository.create(board);
     }
+
     public ObjectCacheRepository<SternalBoard> get() {
         return this.cacheRepository;
     }

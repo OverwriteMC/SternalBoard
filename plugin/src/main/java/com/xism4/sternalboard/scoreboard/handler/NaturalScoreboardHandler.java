@@ -1,7 +1,7 @@
 package com.xism4.sternalboard.scoreboard.handler;
 
-import com.xism4.sternalboard.misc.BukkitConfiguration;
 import com.xism4.sternalboard.SternalBoardPlugin;
+import com.xism4.sternalboard.misc.BukkitConfiguration;
 import com.xism4.sternalboard.scoreboard.ScoreboardManager;
 import com.xism4.sternalboard.scoreboard.Scoreboards;
 import org.bukkit.configuration.ConfigurationSection;

@@ -1,10 +1,10 @@
 package com.xism4.sternalboard.scoreboard.handler;
 
 import com.xism4.sternalboard.SternalBoardPlugin;
+import com.xism4.sternalboard.manager.animation.AnimationService;
 import com.xism4.sternalboard.misc.BukkitConfiguration;
 import com.xism4.sternalboard.scoreboard.ScoreboardManager;
 import com.xism4.sternalboard.scoreboard.Scoreboards;
-import com.xism4.sternalboard.manager.animation.AnimationService;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import team.unnamed.inject.Inject;
