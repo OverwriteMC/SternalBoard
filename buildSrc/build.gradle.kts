@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
+
 plugins {
     `kotlin-dsl`
 }
@@ -6,8 +9,10 @@ repositories {
     gradlePluginPortal()
 }
 
-tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "17"
+kotlin {
+    jvmToolchain(17)
+
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_17)
     }
 }
