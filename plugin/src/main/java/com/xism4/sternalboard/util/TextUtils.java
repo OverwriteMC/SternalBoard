@@ -25,6 +25,9 @@ public final class TextUtils {
     private static final LegacyComponentSerializer LEGACY_SERIALIZER =
             SERVER_VERSION >= 16 ? LegacyComponentSerializer.legacySection() : null;
 
+    private static final boolean PLACEHOLDER_API_PRESENT =
+            Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null;
+
     public static String colorize(String text) {
         if (text == null || text.isEmpty()) return "";
 
@@ -32,7 +35,7 @@ public final class TextUtils {
             return ChatColor.translateAlternateColorCodes('&', text);
         }
 
-        boolean containsLegacy = text.contains("&") || text.contains("§"); //skip
+        boolean containsLegacy = text.indexOf('&') >= 0 || text.indexOf('§') >= 0; //skip
 
         text = transformLegacyHex(text);
         text = containsLegacy ? formatMiniMessage(text) : text;
@@ -98,7 +101,7 @@ public final class TextUtils {
     }
 
     public static String processPlaceholders(final Player player, String text) {
-        if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") == null) {
+        if (!PLACEHOLDER_API_PRESENT) {
             return colorize(text);
         }
         return colorize(PlaceholderAPI.setPlaceholders(player, text));
